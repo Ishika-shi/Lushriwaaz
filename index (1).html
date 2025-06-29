@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lushRiwaaz - Home Decor</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+   <nav>
+  <div class="logo">lushRiwaaz</div>
+  <button class="hamburger" id="hamburger">☰</button>
+  <ul id="nav-links" class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+  <section id="home" class="hero">
+      <div class="hero-content">
+    <h1>From Comfort to class- Explore Beautiful,Budget-Friendly Home Decor </h1>
+    <p>Pillow.Cushion.Bedsheet.Blanket.Doormat.Everything found at one place-Lushriwaaz that too in budget and excellent quality. Don't believe what we say,go ahead and try it!</p>
+    <a href="#products" class="hero-button">Shop Now</a>
+  </section>
+
+<!-- Search Bar -->
+<section id="search-bar">
+  <input type="text" id="productSearch" placeholder="Search products...">
+</section>
+
+  <!-- Product Gallery Section -->
+<section id="products">
+  <h2>Our Products</h2>
+ <!--product section division -->
+  <div id="category-buttons" style="text-align: center; margin: 20px;">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('Bedsheets')">Bedsheets</button>
+  <button onclick="filterProducts('Cushions')">Cushions</button>
+  <button onclick="filterProducts('Carpets')">Carpets</button>
+  <button onclick="filterProducts('Doormats')">Doormats</button>
+</div>
+
+  <!-- Category: Bedsheets -->
+  <h3>Bedsheets</h3>
+  <div class="product-grid">
+    <div class="product-card Bedsheets" onclick="openModal('images/bedsheet1.jpeg', 'Floral Cotton Bedsheet', 'Premium quality soft cotton bedsheet perfect for double bed.', '₹699')">
+      <img src="images/bedsheet1.jpeg" alt="Bedsheet 1">
+      <h3>Floral Print Cotton Bedsheet</h3>
+      <p>Luxurious 100% cotton fabric: Our bedsheet is crafted from premium long staple cotton, providing a soft and soothing touch.</p>
+      <p class="price">₹699</p>
+      <button class="add-to-cart" data-name="Floral Print Cotton Bedsheet" data-price="699">Add to Cart</button>
+    </div>
+    <div class="product-card Bedsheets" onclick="openModal('images/bedsheet2.jpeg', 'King Size Bedsheet', 'Premium quality soft cotton bedsheet perfect for double bed.', '₹799')">
+      <img src="images/bedsheet2.jpeg" alt="Bedsheet 2">
+      <p>Elegant King Size Bedsheet</p>
+      <p class="price">₹799</p>
+      <button class="add-to-cart" data-name="Elegant King Size Bedsheet" data-price="799">Add to Cart</button>
+    </div>
+    <div class="product-card Bedsheets" onclick="openModal('images/bedsheet3.jpeg', 'Striped cotton Bedsheet-Double Bed', 'Premium quality soft cotton bedsheet perfect for double bed.', '₹799')">
+      <img src="images/bedsheet3.jpeg" alt="Bedsheet 3">
+      <h3>Striped cotton bedsheet-Double Bed</h3>
+      <p>Crafted from a blend of polyster and cotton,offering the perfect combination of resilience and softness.</p>
+      <p class="price">₹799</p>
+      <button class="add-to-cart" data-name="Striped Cotton Bedshee-Double bed" data-price="799">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Category: Cushions -->
+  <h3>Cushions</h3>
+  <div class="product-grid">
+    <div class="product-card Cushions" onclick="openModal('images/cushion1.jpg.jpeg', 'Velvet cushion cover', 'Premium quality soft velvet cushion perfect for double bed.', '₹199')">
+      <img src="images/cushion1.jpg.jpeg" alt="Cushion 1">
+      <p>Velvet Cushion Cover</p>
+      <p class="price">₹199</p>
+      <button class="add-to-cart" data-name="Velvet cushion cover" data-price="199">Add to Cart</button>
+    </div>
+    <div class="product-card Cushions" onclick="openModal('images/cushion2.jpg.jpeg', 'Soft Flower cushion', 'Premium quality soft cotton cushion perfect for double bed.', '₹249')">
+      <img src="images/cushion2.jpg.jpeg" alt="Cushion 2">
+      <p>Soft flower Cushion. Set of 2 peices. </p>
+      <p class="price">₹249</p>
+      <button class="add-to-cart" data-name="Soft flower Cushion" data-price="249">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Category: Carpets -->
+  <h3>Carpets</h3>
+  <div class="product-grid">
+    <div class="product-card Carpets" onclick="openModal('images/carpet1.jpeg', 'Soft Shaggy Carpet', 'Premium quality soft shaggy carpet.', '₹999')">
+      <img src="images/carpet1.jpeg" alt="Carpet 1">
+      <p>Soft Shaggy Carpet</p>
+      <p class="price">₹999</p>
+      <button class="add-to-cart" data-name="Soft Shaggy Carpet" data-price="999">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Category: Doormats -->
+  <h3>Doormats</h3>
+  <div class="product-grid">
+    <div class="product-card Doormats" onclick="openModal('images/doormat1.jpeg', 'Anti-slip doormat', 'Premium quality Anti slip doormat', '₹149')">
+      <img src="images/doormat1.jpeg" alt="Doormat 1">
+      <p>Anti-Slip Doormat</p>
+      <p class="price">₹149</p>
+      <button class="add-to-cart" data-name="Anti-Slip Doormat" data-price="149">Add to Cart</button>
+    </div>
+    <div class="product-card Doormats" onclick="openModal('images/doormat2.jpeg', 'Printed doormat', 'Premium quality Anti slip doormat', '₹129')">
+      <img src="images/doormat2.jpeg" alt="Doormat 2">
+      <p>Printed Doormat</p>
+      <p class="price">₹129</p>
+    <button class="add-to-cart" data-name="Printed Doormat" data-price="129">Add to Cart</button>
+    </div>
+</section>
+
+  <!-- Order Form Section -->
+  <section id="order-form">
+   <h2>Place Your Order</h2>
+   <form action="https://formspree.io/f/xrbqypqo" method="POST">
+    <input type="text" id='product'name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="product" placeholder="Product Name" required />
+    <textarea name="address" placeholder="Shipping Address" required></textarea>
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>LushRiwaaz brings elegance, comfort, and quality right into your home. We offer finely curated home decor essentials to uplift your lifestyle.</p>
+    <h2>Let's Talk</h2>
+    <p>Do you have any quetion or need assistance? Feel free to reach us</p>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/yourformID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+<button id="backToTop" title="Go to top">↑</button>
+
+  <footer>
+    <p>&copy; 2025 lushRiwaaz. All rights reserved.</p>
+  </footer>
+<script>
+  const searchInput = document.getElementById('productSearch');
+  const productCards = document.querySelectorAll('.product-card');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+
+    productCards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'visible';
+      }
+    });
+  });
+</script>
+<script>
+  // When "Order Now" is clicked, fill the form and scroll to it
+  document.querySelectorAll('.product-card button').forEach(button => {
+    button.addEventListener('click', () => {
+      const productName = button.parentElement.querySelector('p')?.innerText;
+      const productInput = document.getElementById('product');
+      if (productInput && productName) {
+        productInput.value = productName;
+        window.location.href = "#order-form"; // scrolls to the form
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+      });
+    } else {
+      console.error('Hamburger or navLinks not found!');
+    }
+  });
+</script>
+<script>
+  const cart = [];
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.getAttribute('data-name');
+      const price = parseFloat(button.getAttribute('data-price'));
+      cart.push({ name, price });
+      alert(`${name} added to cart!`);
+    });
+  });
+
+  const cartIcon = document.getElementById('cart-icon');
+  const cartPopup = document.getElementById('cart-popup');
+
+  cartIcon.addEventListener('click', () => {
+    if (cartPopup.style.display === 'none') {
+      if (cart.length === 0) {
+        cartPopup.innerHTML = "<p>Your cart is empty.</p>";
+      } else {
+        cartPopup.innerHTML = "<strong>Your Cart:</strong><ul>" + cart.map(item =>
+          `<li>${item.name} - ₹${item.price}</li>`
+        ).join('') + "</ul>";
+      }
+      cartPopup.style.display = 'block';
+    } else {
+      cartPopup.style.display = 'none';
+    }
+  });
+</script>
+<!-- Floating Cart Icon -->
+<div id="cart-icon">🛒</div>
+
+<!-- Cart Popup Display -->
+<div id="cart-popup" style="display: none;"></div>
+<script>
+  function filterProducts(category) {
+    const allProducts = document.querySelectorAll('.product-card');
+    allProducts.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <img id="modal-image" src="" alt="Product Image">
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <p id="modal-price"></p>
+    <a id="buy-now-button" href="#order-form" class="buy-now-button">Buy Now</a>
+  </div>
+</div>
+<script>
+  function openModal(imageSrc, title, description, price) {
+    document.getElementById('modal-image').src = imageSrc;
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-description').innerText = description;
+    document.getElementById('modal-price').innerText = price;
+    document.getElementById('product-modal').style.display = 'block';
+  }
+
+  // Close modal
+  document.querySelector('.close-button').addEventListener('click', () => {
+    document.getElementById('product-modal').style.display = 'none';
+  });
+
+  // Close when clicking outside the modal content
+  window.addEventListener('click', function (e) {
+    if (e.target.classList.contains('modal')) {
+      document.getElementById('product-modal').style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
